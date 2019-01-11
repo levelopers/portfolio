@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
+import RouterInstance from '../../modules/Router'
 import Header from '../../components/header'
+import Introduction from './components/Introduction'
+import IntroProjects from './components/IntroProjects'
+import styles from './stylesheets/home.module.sass'
 export default class index extends Component {
   constructor(props) {
     super(props)
@@ -10,8 +14,11 @@ export default class index extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.outbox} >
         <Header />
+        <Introduction/>
+        <IntroProjects/>
+        <RouterInstance {...this.props}/>
       </div>
     )
   }
