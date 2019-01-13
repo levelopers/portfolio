@@ -4,6 +4,8 @@ import Header from '../../components/header'
 import Introduction from './components/Introduction'
 import IntroProjects from './components/IntroProjects'
 import styles from './stylesheets/home.module.sass'
+import StarBackground from '../../components/cssStarBackground'
+import Footer from '../../components/footer'
 export default class index extends Component {
   constructor(props) {
     super(props)
@@ -18,7 +20,9 @@ export default class index extends Component {
         <Header />
         <Introduction/>
         <IntroProjects/>
+        <Footer/>
         <RouterInstance {...this.props}/>
+        <StarBackground/>
       </div>
     )
   }
