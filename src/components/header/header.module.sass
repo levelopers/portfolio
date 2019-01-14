@@ -1,4 +1,4 @@
-// @import 'app'
+@import '../../modules/mediaQuery/app'
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower|ZCOOL+KuaiLe")
 .outbox
   font-family: 'ZCOOL KuaiLe', cursive
@@ -24,8 +24,6 @@
     text-decoration: none
 
 .header_nav
-  // @media screen and (max-width: $small) 
-  //   display: none
   display: flex
   flex-direction: row
   align-items: center
@@ -37,4 +35,18 @@
     a
       text-decoration: none
       color: black
-  
+
+// .toggleButton
+//   @include device(tablet)
+//     display: none  
+
+// .toggle_nav
+//   @include device(tablet)
+//     display: none
+//     height: 0
+//   display: flex
+//   transition: max-height 0.2s ease-out
+// .responsive
+//   @include device(tablet)
+//     display: none
+//     height: 0

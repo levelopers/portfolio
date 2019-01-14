@@ -1,6 +1,16 @@
+@import '../../../modules/mediaQuery/app'
+  
 .project
-  width: 48%
-  height: 50vh
+  min-width: $mobileS
+  @include device(tablet)
+    width: 80%
+    height: 80vh
+  @include device(laptop)
+    width: 45%
+    height: 50vh
+  @include device(desktop)
+    width: 45%
+    height: 60vh
   background: #ffc004
   margin-bottom: 10%
   display: flex

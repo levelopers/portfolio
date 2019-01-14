@@ -1,48 +1,61 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './header.module.sass'
-import $ from 'jquery'
 import './header.sass'
-export default function header(props) {
-  return (
-    <div className={styles.outbox}>
-      <div className={styles.logo}>
-        <Link to="/">Dongsheng Yin</Link>
+
+
+
+export default class header extends Component {
+  state = { 
+    height: '0',
+    display: 'none'
+  }
+  toggleNavClick = () => {
+    this.setState({
+      height: '200px',
+      display: 'flex'
+    })
+  }
+  render() {
+    return (
+      <div className={styles.outbox}>
+        <div className={styles.logo}>
+          <Link to="/">Dongsheng Yin</Link>
+        </div>
+        <div className={styles.header_nav}>
+          <div className="header_nav">
+            <Link to="/">Home</Link>
+          </div>
+          <div className="header_nav">
+            <Link to="/projects">Projects</Link>
+          </div>
+          <div className="header_nav">
+            <Link to="/about">About</Link>
+          </div>
+          <div className={styles.contact} className="header_nav">
+            Contact
+          </div>
+        </div>
+        {/* toggle nav bar */}
+        {/* <div className={styles.toggleButton}>
+          <button onClick={this.toggleNavClick}>button</button>
+        </div> */}
+        <div className={[styles.responsive].join(' ')} style={{height:this.state.height, display:this.state.display}}>
+          <div className={styles.toggle_nav_ele}>
+            <Link to="/">Home</Link>
+          </div>
+          <div className={styles.toggle_nav_ele}>
+            <Link to="/projects">Projects</Link>
+          </div>
+          <div className={styles.toggle_nav_ele}>
+            <Link to="/about">About</Link>
+          </div>
+          <div className={styles.contact} className={styles.toggle_nav_ele}>
+            Contact
+          </div>
+        </div>
       </div>
-      <div className={styles.header_nav}>
-        <div className="header_nav">
-          <Link to="/">Home</Link>
-        </div>
-        <div className="header_nav">
-          <Link to="/projects">Projects</Link>
-        </div>
-        <div className="header_nav">
-          <Link to="/about">About</Link>
-        </div>
-        <div className={styles.contact} className="header_nav">
-          Contact
-        </div>
-      </div>
-    </div>
-  )
+    )
+  }
 }
-// $(function() {  
-//   $('.header_nav')
-//     .on('mouseenter', function(e) {
-//       console.log(111);
-      
-// 			var parentOffset = $(this).offset(),
-//       		relX = e.pageX - parentOffset.left,
-//           relY = e.pageY - parentOffset.top;
-//           console.log(relX,relY);
-          
-// 			$(this).css({background:`rgb(${relX},${relY})`})
-//     })
-//     // .on('mouseout', function(e) {
-// 		// 	var parentOffset = $(this).offset(),
-//     //   		relX = e.pageX - parentOffset.left,
-//     //   		relY = e.pageY - parentOffset.top;
-//     // 	$(this).css({top:relY, left:relX})
-//     // });
-// });
 
