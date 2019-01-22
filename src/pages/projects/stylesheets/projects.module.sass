@@ -1,0 +1,62 @@
+
+@import '../../../modules/mediaQuery/app'
+
+.page
+  display: flex
+  width: 100%
+  height: 100vh
+
+.navbar
+  margin-top: 10%
+  margin-left: 3%
+
+.board_outbox
+  width: 70%
+  height: 70%
+  margin-top: 10%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  
+.row
+  width: 100%
+  height: 40%
+  display: flex
+  justify-content: space-around
+  div 
+    height: 100%
+    width: 40%
+    div 
+      width: 100%
+
+@media screen and (max-width: $tablet)
+  .board_outbox
+    width: 80%
+    position: relative
+  .page
+    display: flex
+    justify-content: center
+  .navbar
+    display: none  
+  .row
+    height: 30vh
+    
+
+@media screen and (max-width: $mobileM)
+  .board_outbox
+    width: 100%
+    height: 140vh
+    position: relative
+  .row
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    height: 80vh
+    div 
+      height: 100%
+      width: 80%
+      div 
+        width: 100%
+    

@@ -37,8 +37,8 @@ export default function index() {
             <p>Social</p>
           </div>
           <div className={styles.content_context}>
-            <a target="blank" href="https://github.com/levelopers">Github</a>
-            <a target="blank" href="https://www.linkedin.com/in/dongsheng-yin-97b992136/">Linkedin</a>
+            <a target="blank_github" href="https://github.com/levelopers">Github</a>
+            <a target="blank_linkedin" href="https://www.linkedin.com/in/dongsheng-yin-97b992136/">Linkedin</a>
           </div>
         </div>
       </div>

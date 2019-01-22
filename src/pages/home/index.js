@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import RouterInstance from '../../modules/Router'
 import Header from '../../components/header'
 import Introduction from './components/Introduction'
@@ -6,24 +6,19 @@ import IntroProjects from './components/IntroProjects'
 import styles from './stylesheets/home.module.sass'
 import StarBackground from '../../components/cssStarBackground'
 import Footer from '../../components/footer'
-export default class index extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
 
-    }
-  }
-
-  render() {
-    return (
-      <div className={styles.outbox} >
+export default function Home(props) {
+  return (
+    <div className={styles.outbox} >
+      <div className={styles.content}>
         <Header />
-        <Introduction/>
-        <IntroProjects/>
-        <Footer/>
-        <RouterInstance {...this.props}/>
-        <StarBackground/>
+        <Introduction />
+        <IntroProjects />
+        <Footer />
       </div>
-    )
-  }
+      <RouterInstance {...props} />
+      <StarBackground />
+    </div>
+  )
 }
+

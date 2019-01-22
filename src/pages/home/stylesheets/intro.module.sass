@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Slab|Slabo+27px")
+@import '../../../modules/mediaQuery/app'
 .outbox
   height: 90vh
+  width: 100vw
   display: flex
   align-items: center
   position: relative
@@ -22,6 +24,18 @@
   font-size: 30px
   font-family: 'Josefin Slab', serif
   line-height: 1.5em
+  width: 100%
+  word-wrap: break-word
+  a 
+    width: 100%
+
+@media screen and (max-width: $tablet)
+  .title
+    font-size: 20px
+    margin-top: 0
+  .chat
+    font-size: 15px
+    margin-bottom: 0
 
 .mail_link
   color: orange

@@ -18,12 +18,15 @@ export default function Introduction() {
           <a className={styles.mail_link} href="mailto:allenyin@cmail.carleton.ca">
             allenyin@cmail.carleton.ca</a>
         </p>
-        <div className={styles.arrow} onClick={() =>
-          window.scrollBy({
-            top: window.innerHeight,
-            behavior: 'smooth'
-          })
-        }>
+        {/* arrow */}
+        <div
+          className={styles.arrow}
+          onClick={() =>
+            window.scrollBy({
+              top: window.innerHeight,
+              behavior: 'smooth'
+            })}
+        >
           <div className={styles.down}></div>
         </div>
       </div>

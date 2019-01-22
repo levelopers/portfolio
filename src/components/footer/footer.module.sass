@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Slab|Roboto+Slab")
+@import '../../modules/mediaQuery/app'
+
 .outbox
   z-index: 1
   background: white
@@ -43,6 +45,12 @@
   div 
     margin-top: 10px
     margin-bottom: 10px
+
+@media screen and (max-width: $mobileM)
+  .content_title
+    font-size: 15px
+  .content_context
+    font-size: 10px
 
 .menu .contact .social
   display: flex

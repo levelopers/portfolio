@@ -2,9 +2,9 @@ import React from 'react'
 import './stars.css'
 export default function index() {
   return (
-    <div class="backgroundStar">
-      <div class="stars"></div>
-      <div class="twinkling"></div>
+    <div className="backgroundStar">
+      <div className="stars"></div>
+      <div className="twinkling"></div>
     </div>
   )
 }

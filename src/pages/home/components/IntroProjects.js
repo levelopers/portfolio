@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../stylesheets/IntroProjects.module.sass'
 import reactLogo from '../../../assets/ReactImag.png'
-import Project from './Project'
+import Project from '../../../components/projectBox'
 
 export default function IntroProjects(props) {
   return (
