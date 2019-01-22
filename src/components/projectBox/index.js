@@ -8,22 +8,44 @@ export default function Project(props) {
   return (
     //react router
     <div
-      className={styles.project}
+      className={`${styles.project} ${props.className}`}
       onClick={() => router(props.link)}
     >
       <img src={props.img || JSLogo} alt="react" />
       <div className={styles.context_box} >
         <div className={styles.context}>
-        {/* content title */}
+          {/* content title */}
           <div className={styles.title}>
             <p>{props.title} <br /> _____</p>
           </div>
-          {/* hrefs */}
+          {/* hrefs (live demo & source code) */}
           {
-            props.live_demo && props.source_code &&
+            (!!props.live_demo || !!props.source_code) &&
             <div className={styles.btn} onClick={(e) => e.stopPropagation()}>
-              <a target="live_demo" href={props.live_demo}>Live Demo</a>
-              <a target="source_code" href={props.source_code}>Source Code</a>
+              <a
+                target="live_demo"
+                href={props.live_demo}
+                target={props.live_demo}
+                className={
+                  !!props.live_demo
+                    ? styles.btn_enabled
+                    : styles.btn_disabled
+                }
+              >
+                Live Demo
+              </a>
+              <a
+                target="source_code"
+                href={props.source_code}
+                target={props.source_code}
+                className={
+                  !!props.source_code
+                    ? styles.btn_enabled
+                    : styles.btn_disabled
+                }
+              >
+                Source Code
+              </a>
             </div>
           }
           {props.children}

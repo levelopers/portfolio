@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from '../stylesheets/intro.module.sass'
+import Arrow from '../../../components/arrow'
+
 export default function Introduction() {
   return (
     <div className={styles.outbox}>
@@ -19,16 +21,7 @@ export default function Introduction() {
             allenyin@cmail.carleton.ca</a>
         </p>
         {/* arrow */}
-        <div
-          className={styles.arrow}
-          onClick={() =>
-            window.scrollBy({
-              top: window.innerHeight,
-              behavior: 'smooth'
-            })}
-        >
-          <div className={styles.down}></div>
-        </div>
+        <Arrow />
       </div>
     </div>
   )

@@ -1,10 +1,31 @@
 
 @import '../../../modules/mediaQuery/app'
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab|Roboto+Slab|Slabo+27px")
+
+.outbox 
+  width: 100%
+  height: 100%
+.content
+  display: flex
+  flex-direction: column
+  width: 100%
+  height: 100%
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  .footer
+    width: 100%
+    opacity: 1
+    background-color: rgb(200,200,200)
 
 .page
   display: flex
   width: 100%
-  height: 100vh
+  height: 100%
+  .arrow
+    position: fixed
+ 
 
 .navbar
   margin-top: 10%
@@ -14,20 +35,27 @@
   width: 70%
   height: 70%
   margin-top: 10%
+  margin-bottom: 10%
+  margin-left: 5%
   display: flex
   flex-direction: column
   justify-content: space-between
+  .category_title
+      color: white
+      font-family: 'Roboto Slab', serif
+      font-size: 15px
+      margin-bottom: 5%
   
 .row
-  width: 100%
-  height: 40%
+  width: 90%
+  height: 40vh
   display: flex
-  justify-content: space-around
-  div 
+  justify-content: space-between
+  margin-bottom: 5%
+  .project 
     height: 100%
     width: 40%
-    div 
-      width: 100%
+    
 
 @media screen and (max-width: $tablet)
   .board_outbox
@@ -36,6 +64,9 @@
   .page
     display: flex
     justify-content: center
+    .arrow
+      bottom: 10%
+      left: 5%
   .navbar
     display: none  
   .row
@@ -43,20 +74,27 @@
     
 
 @media screen and (max-width: $mobileM)
+  .outbox
+    overflow: scroll
+  .page
+    .arrow
+      bottom: 10%
+      left: 0
+
   .board_outbox
     width: 100%
-    height: 140vh
+    height: 150%
     position: relative
+
   .row
     width: 100%
+    height: 100%
     display: flex
     flex-direction: column
     justify-content: space-between
     align-items: center
-    height: 80vh
-    div 
-      height: 100%
+    .project 
+      height: 30vh
       width: 80%
-      div 
-        width: 100%
+      
     

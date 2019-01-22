@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../stylesheets/IntroProjects.module.sass'
 import reactLogo from '../../../assets/ReactImag.png'
+import nodejsLogo from '../../../assets/nodejsLogo.png'
 import Project from '../../../components/projectBox'
 
 export default function IntroProjects(props) {
@@ -12,13 +13,13 @@ export default function IntroProjects(props) {
         title='React-forum' 
         description='a simple React application' 
         img={reactLogo}
-        link='aaa'
+        link='/projects'
         />
         <Project 
-        title='React-forum' 
-        description='a simple React application' 
-        img={reactLogo}
-        link='aaa'
+        title='Food2fork' 
+        description='a Nodejs request for API application' 
+        img={nodejsLogo}
+        link='/projects'
         />
       </div>
     </div>

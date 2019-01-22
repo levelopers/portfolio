@@ -40,32 +40,3 @@
 .mail_link
   color: orange
 
-
-@keyframes downarrow 
-  from
-    transform: translateY(0) 
-    opacity: 0.4 
-  30% 
-    transform: translateY(1.15em)
-    opacity: 0.8
-  65% 
-    transform: translateY(0.8em)
-  to
-    transform: translateY(1em) 
-    opacity: 0.9 
-
-.arrow 
-  height: 3em
-  width: 5em
-  animation: downarrow 1s infinite alternate ease-in-out
-  &:hover
-    animation: downarrow 500ms infinite alternate ease-in-out
-
-.down 
-  width: 0
-  height: 0
-  border: 15px solid transparent
-  border-bottom: 10px solid orange
-  border-right: 10px solid orange
-  margin: 15px
-  transform: rotate(45deg)

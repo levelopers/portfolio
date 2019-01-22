@@ -2,9 +2,11 @@ import React from 'react'
 import styles from './footer.module.sass'
 import { Link } from 'react-router-dom'
 
-export default function index() {
+export default function Footer(props) {
   return (
-    <div className={styles.outbox}>
+    <div className={`${styles.outbox} ${props.className}`}>
+    <div className={styles.page}>
+
       <div className={styles.title}>
         <p className={styles.name}>Dongsheng Yin</p>
         <a href="mailto:allenyin@cmail.carleton.ca">allenyin@cmail.carleton.ca</a>
@@ -45,6 +47,8 @@ export default function index() {
       <div className={styles.copyright}>
         <p> Copyright Dongsheng Yin 2019 © </p>
       </div>
+    </div>
+
     </div>
   )
 }

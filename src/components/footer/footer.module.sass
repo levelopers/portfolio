@@ -7,7 +7,11 @@
   opacity: 0.8
   display: flex
   flex-direction: column
-  padding: 30px
+  width: 100%
+  bottom: 0
+  
+.page
+  margin: 30px
 
 .title
   a
@@ -24,6 +28,7 @@
 .content
   display: flex
   justify-content: space-between
+  width: 80%
   padding-top: 20px
   padding-bottom: 20px
 
@@ -35,9 +40,10 @@
   font-size: 20px
   display: flex
   flex-direction: column
+  color: rgb(100,100,100)
   a
     text-decoration: none
-    color: black
+    color: rgb(100,100,100)
     margin-top: 10px
     margin-bottom: 10px
     &:hover
@@ -46,15 +52,22 @@
     margin-top: 10px
     margin-bottom: 10px
 
-@media screen and (max-width: $mobileM)
+@media screen and (max-width: $mobileL)
   .content_title
     font-size: 15px
   .content_context
     font-size: 10px
+  .title
+    a
+      font-size: 10px
+  .name
+    font-size: 20px
+  .content
+    width: 90%
 
-.menu .contact .social
-  display: flex
-  flex-direction: column
+  .menu .contact .social
+    display: flex
+    flex-direction: column
 
-.copyright
-  font-size: 15px
+  .copyright
+    font-size: 10px

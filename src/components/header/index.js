@@ -35,9 +35,13 @@ export default class header extends Component {
                 </div>
           }
         </MediaQuery>
+        {/* navbar */}
         <div className={styles.toggle_button} onClick={this.toggleNavClick}>
-          button
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        {/* navcontent */}
         <MediaQuery maxWidth={Number(size.tablet.slice(0, -2))}>
           {
             matches =>
@@ -62,9 +66,19 @@ function NavContent() {
         <Link to="/projects">Projects</Link>
       </div>
       <div className="nav_ele">
-        <Link to="/about">About</Link>
+        <a target="resume" href="https://firebasestorage.googleapis.com/v0/b/dongsheng-portfolio.appspot.com/o/resume.pdf?alt=media&token=6a0f3277-e2f2-4b35-b495-24f379cfc00c">
+        Resume
+        </a>
       </div>
-      <div className={styles.contact} className="nav_ele">
+      <div
+        className={styles.contact}
+        className="nav_ele"
+        onClick={() =>
+          window.scrollBy({
+            top: 100000,
+            behavior: 'smooth'
+          })}
+      >
         Contact
             </div>
     </div>

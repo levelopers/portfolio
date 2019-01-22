@@ -4,7 +4,7 @@
 .outbox
   font-family: 'ZCOOL KuaiLe', cursive
   font-size: 25px
-  width: 100%
+  width: 100vw
   height: 10vh
   display: flex
   justify-content: space-between
@@ -40,6 +40,11 @@
 
 .toggle_button
   display: none
+  span
+    display: block
+    width: 20px
+    height: 5px
+    border-top: 2px solid black
   
 
 @media screen and (max-width: $tablet)
@@ -48,13 +53,14 @@
     font-size: 20px
 
   .toggle_button
-    display: flex 
-    align-items: center 
+    display: flex
+    flex-direction: column 
+    justify-content: center
     margin-right: 20px
     font-size: 10px
 
   .header_nav
-    font-size: 10px
+    font-size: 15px
     display: flex
     justify-content: flex-start
     margin-left: 20px
