@@ -1,0 +1,107 @@
+
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower|ZCOOL+KuaiLe")
+@import "../../../modules/mediaQuery/app"
+  
+.outbox
+  width: 100%
+  height: 100vh
+  display: flex
+  flex-direction: column
+  color: white
+
+.page_title
+  font-size: 50px
+  font-family: ZCOOL KuaiLe
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 20px
+  margin-bottom: 10%
+  .underline
+    height: 3px
+    width: 10%
+    background: white  
+    margin-top: 20px
+
+
+.page_content
+  margin: 10%
+  display: flex
+  flex-direction: column
+
+.title
+  margin: 5%
+  margin-left: 0
+  font-size: 30px
+
+.content
+  margin-right: 10%
+  font-size: 20px
+  display: flex
+  flex-direction: column
+  .item
+    margin-bottom: 15px
+    .item_title
+      display: flex
+      margin-bottom: 10px
+      font-size: 20px
+      .date
+        margin-left: 20px
+    .item_content
+      font-size: 15px
+      
+.summary, .education, .work
+  display: flex
+  flex-direction: column
+  margin-bottom: 10%
+  .title
+    margin: 0
+    margin-bottom: 20px
+
+.summary
+  width: 60%
+  .title
+    display: flex
+    justify-content: center
+  .content
+    text-align: center
+    line-height: 1.5em
+
+.skills
+  width: 40%
+  height: 100%
+  display: flex
+  flex-direction: column
+  .skill
+    height: 10%
+    margin-bottom: 20px
+
+.row
+  display: flex
+  width: 100%
+  height: 50vh
+  margin-bottom: 5%
+
+.tech_stack
+  width: 100%
+  height: 50vh
+  display: flex
+  justify-content: space-around
+  .stack
+    width: 20%
+    text-align: center
+    img
+      width: 50%
+      height: 20%
+      margin-bottom: 20px
+    .stack_title
+      font-size: 20px
+      font-family: bolder
+      margin-bottom: 10px
+    .stack_text
+      font-size: 15px
+  
+@media screen and (min-width: $laptop)
+  .page_content
+    margin: 5%

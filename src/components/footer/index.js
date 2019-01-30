@@ -17,7 +17,9 @@ export default function Footer(props) {
             <p>Menu</p>
           </div>
           <div className={styles.content_context}>
-            <Link to="/about">About </Link>
+            <a target="resume" href="https://firebasestorage.googleapis.com/v0/b/dongsheng-portfolio.appspot.com/o/resume.pdf?alt=media&token=6a0f3277-e2f2-4b35-b495-24f379cfc00c">
+            Resume
+            </a>
             <Link to="/projects"> Projects</Link>
           </div>
         </div>

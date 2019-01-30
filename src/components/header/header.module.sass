@@ -45,7 +45,17 @@
     width: 20px
     height: 5px
     border-top: 2px solid black
-  
+  &:hover, &:focus, &:active
+    span
+      animation: rotating 1s 1  ease-in-out
+    
+
+@keyframes rotating
+  50%
+    width: 200px
+    border-color: orange
+    
+    
 
 @media screen and (max-width: $tablet)
   .logo
@@ -64,5 +74,7 @@
     display: flex
     justify-content: flex-start
     margin-left: 20px
+    &:focus
+      transition: height 1s linear
     
   

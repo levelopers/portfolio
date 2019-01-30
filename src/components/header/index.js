@@ -46,8 +46,11 @@ export default class header extends Component {
           {
             matches =>
               matches
-                ? this.state.showMenu &&
-                <NavContent />
+                ? 
+                <NavContent  style={
+                  this.state.showMenu 
+                  ?{display:'flex',height:'100%'}
+                  :{display:'none',height:'0'}}/>
                 : <NavContent />
           }
         </MediaQuery>
@@ -56,20 +59,28 @@ export default class header extends Component {
   }
 }
 
-function NavContent() {
+function NavContent({style}) {
   return (
-    <div className={styles.header_nav}>
+    <div style={style} className={styles.header_nav}>
+    {/* home */}
       <div className="nav_ele">
         <Link to="/">Home</Link>
       </div>
+      {/* projects */}
       <div className="nav_ele">
         <Link to="/projects">Projects</Link>
       </div>
+      {/* about me */}
+      <div className="nav_ele">
+        <Link to="/about">About me</Link>
+      </div>
+      {/* resume */}
       <div className="nav_ele">
         <a target="resume" href="https://firebasestorage.googleapis.com/v0/b/dongsheng-portfolio.appspot.com/o/resume.pdf?alt=media&token=6a0f3277-e2f2-4b35-b495-24f379cfc00c">
-        Resume
+          Resume
         </a>
       </div>
+      {/* contact */}
       <div
         className={styles.contact}
         className="nav_ele"
