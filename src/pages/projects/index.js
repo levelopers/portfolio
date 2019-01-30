@@ -22,7 +22,7 @@ export default function Projects(props) {
               subtitle="web development"
               year="2018"
               category="frontend"
-              github="link"
+              github="https://github.com/levelopers"
             />
           </div>
           <ProjectBoard />

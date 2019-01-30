@@ -10,8 +10,8 @@ export default function Project(props) {
     <div
       className={`${styles.project} ${props.className}`}
       onClick={() => router(props.link)}
+      style={{ backgroundImage: `url(${props.img || JSLogo})` }}
     >
-      <img src={props.img || JSLogo} alt="react" />
       <div className={styles.context_box} >
         <div className={styles.context}>
           {/* content title */}
