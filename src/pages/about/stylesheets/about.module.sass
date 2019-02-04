@@ -3,32 +3,40 @@
 @import "../../../modules/mediaQuery/app"
   
 .outbox
-  width: 100%
-  height: 100vh
+  width: 100vw
+  height: 200vh
   display: flex
   flex-direction: column
   color: white
-
-.page_title
-  font-size: 50px
-  font-family: ZCOOL KuaiLe
+  
+.page
   width: 100%
+  height: 100%
   display: flex
   flex-direction: column
-  align-items: center
-  margin-top: 20px
-  margin-bottom: 10%
-  .underline
-    height: 3px
-    width: 10%
-    background: white  
-    margin-top: 20px
+  .page_title
+    font-size: 50px
+    font-family: ZCOOL KuaiLe
+    width: 100%
+    height: 10%
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 5%
+    margin-bottom: 5%
+    .underline
+      height: 3px
+      width: 10%
+      background: white  
+      margin-top: 20px
+  .page_content
+    width: 80%
+    margin: auto
+    display: flex
+    flex-direction: column
+    align-items: cetner!important
 
 
-.page_content
-  margin: 10%
-  display: flex
-  flex-direction: column
 
 .title
   margin: 5%
@@ -73,21 +81,27 @@
   height: 100%
   display: flex
   flex-direction: column
+  justify-content: space-between
   .skill
     height: 10%
-    margin-bottom: 20px
+    margin-bottom: 5%
 
 .row
   display: flex
   width: 100%
-  height: 50vh
+  height: 60%
   margin-bottom: 5%
+
+.column
+  height: 20%
+
 
 .tech_stack
   width: 100%
-  height: 50vh
+  height: 25%
   display: flex
   justify-content: space-around
+  margin-bottom: 5%
   .stack
     width: 20%
     text-align: center
@@ -102,6 +116,67 @@
     .stack_text
       font-size: 15px
   
-@media screen and (min-width: $laptop)
-  .page_content
-    margin: 5%
+@media screen and (max-width: $tablet)
+  .page
+    .page_title
+      font-size: 20px
+  .title
+    font-size: 20px
+  .content
+    font-size: 10px
+    .item
+      .item_title
+        font-size: 15px
+      .item_content
+        font-size: 10px
+  .skills
+    .skill
+      font-size: 10px
+      margin-bottom: 3%
+  .tech_stack
+    .stack
+      .stack_title
+        font-size: 15px
+      .stack_text
+        font-size: 10px
+
+@media screen and (max-width: $mobileM)
+  .page
+    height: 300vh
+    .page_content
+      margin-top: 20px
+      margin-bottom: 20px
+    .page_title
+      height: 5%
+  .title
+    font-size: 15px
+  .row
+    display: flex
+    flex-direction: column
+    height: 30%
+  .column
+    margin-top: 10px
+  .summary
+    width: 100%
+    .title
+      margin-bottom: 5%
+  .content
+    margin-bottom: 10%
+  .skills
+    width: 100%
+  .content
+    font-size: 8px
+    margin-bottom: 5px
+    .item
+      margin-bottom: 5px
+      .item_title
+        font-size: 10px
+      .item_content
+        font-size: 8px
+  .summary, .education, .work
+    margin-bottom: 5px
+    .title
+      margin-bottom: 10px
+  .tech_stack
+    height: 125%
+  

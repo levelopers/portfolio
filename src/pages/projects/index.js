@@ -1,21 +1,23 @@
 import React from 'react'
 import styles from './stylesheets/projects.module.sass'
-import Header from '../../components/header'
-import Footer from '../../components/footer'
 import Navbar from '../../components/navbar'
-import Background from '../../components/cssStarBackground'
 import ProjectBoard from './components/ProjectBoard'
-import RouterInstance from '../../modules/Router'
 import Arrow from '../../components/arrow'
 import MediaQuery from 'react-responsive'
 import size from '../../modules/mediaQuery'
+import Refs from '../../modules/Refs'
+
 
 export default function Projects(props) {
   return (
-    <div className={styles.outbox}>
-      <div className={styles.content}>
-        <Header />
-        <div className={styles.page}>
+    <div className={styles.outbox} ref={ref=>Refs.set_Ref('projects',ref)}>
+      <div className={styles.page}>
+        <div className={styles.page_title}>
+          Projects
+        <div className={styles.underline}>
+          </div>
+        </div>
+        <div className={styles.page_content}>
           <div className={styles.navbar}>
             <Navbar
               title="Projects"
@@ -32,10 +34,7 @@ export default function Projects(props) {
             </div>
           </MediaQuery>
         </div>
-        <Footer className={styles.footer} />
       </div>
-      <Background />
-      <RouterInstance {...props} />
     </div>
   )
 }

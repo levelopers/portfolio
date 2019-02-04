@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './arrow.module.sass'
 
-export default function Arrow() {
+export default function Arrow({className}) {
   return (
     <div
-      className={styles.arrow}
+      className={`${className} ${styles.arrow}`}
       onClick={() =>
         window.scrollBy({
           top: window.innerHeight,

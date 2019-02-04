@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './projectBox.module.sass'
-import { router } from '../../modules/Router'
+// import { router } from '../../modules/Router'
 import JSLogo from '../../assets/JSLogo.png'
 
 // const {title,description,img,link} = props
@@ -9,7 +9,7 @@ export default function Project(props) {
     //react router
     <div
       className={`${styles.project} ${props.className}`}
-      onClick={() => router(props.link)}
+      // onClick={() => router(props.link)}
       style={{ backgroundImage: `url(${props.img || JSLogo})` }}
     >
       <div className={styles.context_box} >
