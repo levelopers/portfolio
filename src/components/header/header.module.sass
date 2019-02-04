@@ -8,9 +8,11 @@
   height: 10vh
   display: flex
   justify-content: space-between
-  z-index: 1
+  z-index: 2
   background-color: white
   box-shadow: 0 1px 5px 1px orange
+  position: fixed
+  
   
 .logo
   font-family: 'Indie Flower', cursive
@@ -76,5 +78,9 @@
     margin-left: 20px
     &:focus
       transition: height 1s linear
+
+@media screen and (max-width: $mobileM)
+  .header_nav
+    font-size: 8px
     
   

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import styles from './header.module.sass'
 import './header.sass'
 import MediaQuery from 'react-responsive';
 import device, { size } from '../../modules/mediaQuery'
+import Refs from '../../modules/Refs'
 
 export default class header extends Component {
   state = {
@@ -28,10 +28,10 @@ export default class header extends Component {
               matches
                 ? !this.state.showMenu &&
                 <div className={styles.logo}>
-                  <Link to="/">Dongsheng Yin</Link>
+                  <a href="/">Dongsheng Yin</a>
                 </div>
                 : <div className={styles.logo}>
-                  <Link to="/">Dongsheng Yin</Link>
+                  <a href="/">Dongsheng Yin</a>
                 </div>
           }
         </MediaQuery>
@@ -46,11 +46,11 @@ export default class header extends Component {
           {
             matches =>
               matches
-                ? 
-                <NavContent  style={
-                  this.state.showMenu 
-                  ?{display:'flex',height:'100%'}
-                  :{display:'none',height:'0'}}/>
+                ?
+                <NavContent style={
+                  this.state.showMenu
+                    ? { display: 'flex', height: '100%' }
+                    : { display: 'none', height: '0' }} />
                 : <NavContent />
           }
         </MediaQuery>
@@ -59,20 +59,27 @@ export default class header extends Component {
   }
 }
 
-function NavContent({style}) {
+function scroll(ref) {
+  window.scrollTo({
+    top: Refs.get_Ref(ref).offsetTop-50, //fixed header top offset 50
+    behavior: "smooth"
+  })
+}
+
+function NavContent({ style }) {
   return (
     <div style={style} className={styles.header_nav}>
-    {/* home */}
+      {/* home */}
       <div className="nav_ele">
-        <Link to="/">Home</Link>
+        <a onClick={() => scroll('home')}>Home</a>
       </div>
       {/* projects */}
       <div className="nav_ele">
-        <Link to="/projects">Projects</Link>
+        <a onClick={() => scroll('projects')}>Projects</a>
       </div>
       {/* about me */}
       <div className="nav_ele">
-        <Link to="/about">About me</Link>
+        <a onClick={() => scroll('about')}>About me</a>
       </div>
       {/* resume */}
       <div className="nav_ele">

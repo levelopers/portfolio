@@ -21,7 +21,7 @@ export default function Introduction() {
             allenyin@cmail.carleton.ca</a>
         </p>
         {/* arrow */}
-        <Arrow />
+        <Arrow className={styles.arrow} />
       </div>
     </div>
   )

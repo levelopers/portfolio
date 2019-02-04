@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './footer.module.sass'
-import { Link } from 'react-router-dom'
 
 export default function Footer(props) {
   return (
@@ -20,7 +19,7 @@ export default function Footer(props) {
             <a target="resume" href="https://firebasestorage.googleapis.com/v0/b/dongsheng-portfolio.appspot.com/o/resume.pdf?alt=media&token=6a0f3277-e2f2-4b35-b495-24f379cfc00c">
             Resume
             </a>
-            <Link to="/projects"> Projects</Link>
+            <a href="/projects"></a>
           </div>
         </div>
         <div className={styles.contact}>

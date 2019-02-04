@@ -1,31 +1,41 @@
 
 @import '../../../modules/mediaQuery/app'
-@import url("https://fonts.googleapis.com/css?family=Josefin+Slab|Roboto+Slab|Slabo+27px")
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab|Roboto+Slab|Slabo+27px|ZCOOL+KuaiLe")
 
 .outbox 
-  width: 100%
-  height: 100%
-.content
+  width: 100vw
+  height: 180vh
+  display: flex
+  flex-direction: column
+  overflow: hidden
+
+.page
   display: flex
   flex-direction: column
   width: 100%
   height: 100%
-  top: 0
-  bottom: 0
-  right: 0
-  left: 0
-  .footer
-    width: 100%
-    opacity: 1
-    background-color: rgb(200,200,200)
-
-.page
-  display: flex
-  width: 100%
-  height: 100%
   .arrow
     position: fixed
- 
+
+.page_title
+  color: white
+  font-size: 50px
+  font-family: ZCOOL KuaiLe
+  width: 100%
+  height: 10%
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 5%
+  // margin-bottom: 5%
+  .underline
+    height: 3px
+    width: 10%
+    background: white  
+    margin-top: 20px
+.page_content
+  display: flex
+  height: 90%
 
 .navbar
   margin-top: 10%
@@ -33,9 +43,9 @@
 
 .board_outbox
   width: 70%
-  height: 70%
-  margin-top: 10%
-  margin-bottom: 10%
+  height: 90%
+  margin-top: 5%
+  margin-bottom: 5%
   margin-left: 5%
   display: flex
   flex-direction: column
@@ -48,7 +58,7 @@
   
 .row
   width: 95%
-  height: 40vh
+  height: 40%
   display: flex
   justify-content: space-between
   margin-bottom: 5%
@@ -58,9 +68,12 @@
     
 
 @media screen and (max-width: $tablet)
+  .page_title
+    font-size: 20px
   .board_outbox
     width: 90%
     position: relative
+    margin-bottom: 5%
   .page
     display: flex
     justify-content: center
@@ -70,7 +83,7 @@
   .navbar
     display: none  
   .row
-    height: 30vh
+    height: 30%
     .project
       width: 45%
     
@@ -78,11 +91,13 @@
 @media screen and (max-width: $mobileM)
   .outbox
     overflow: scroll
+    height: 200vh
   .page
     .arrow
       bottom: 10%
       left: 0
-
+  .page_title
+      height: 5%
   .board_outbox
     width: 100%
     height: 150%
@@ -99,7 +114,7 @@
     justify-content: space-between
     align-items: center
     .project 
-      height: 30vh
+      height: 30%
       width: 80%
       
     
