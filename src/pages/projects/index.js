@@ -2,9 +2,6 @@ import React from 'react'
 import styles from './stylesheets/projects.module.sass'
 import Navbar from '../../components/navbar'
 import ProjectBoard from './components/ProjectBoard'
-import Arrow from '../../components/arrow'
-import MediaQuery from 'react-responsive'
-import size from '../../modules/mediaQuery'
 import Refs from '../../modules/Refs'
 
 
@@ -28,11 +25,6 @@ export default function Projects(props) {
             />
           </div>
           <ProjectBoard />
-          <MediaQuery query={size.max.tablet}>
-            <div className={styles.arrow}>
-              <Arrow />
-            </div>
-          </MediaQuery>
         </div>
       </div>
     </div>

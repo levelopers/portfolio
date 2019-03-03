@@ -61,7 +61,7 @@ export default class header extends Component {
 
 function scroll(ref) {
   window.scrollTo({
-    top: Refs.get_Ref(ref).offsetTop-50, //fixed header top offset 50
+    top: Refs.get_Ref(ref).offsetTop-100, //fixed header top offset 100
     behavior: "smooth"
   })
 }

@@ -17,4 +17,7 @@ body{
 
 .page_content{
   margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }

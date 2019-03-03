@@ -16,8 +16,8 @@ export default function App(props) {
         <Home />
         <Projects />
         <About />
+        <Footer />
       </div>
-      <Footer />
     </div>
   )
 };

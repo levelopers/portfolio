@@ -12,7 +12,7 @@
   background-color: white
   box-shadow: 0 1px 5px 1px orange
   position: fixed
-  
+  white-space: nowrap //prevent animation breaking words
   
 .logo
   font-family: 'Indie Flower', cursive
@@ -81,6 +81,7 @@
 
 @media screen and (max-width: $mobileM)
   .header_nav
+    word-break: none
     font-size: 8px
     
   
